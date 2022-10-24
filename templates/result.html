@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <table class="table">
+        <tr>
+            {% for col in nomiColonne %}
+                <th>{{col}}</th>
+            {% endfor %}
+        </tr>
+        {% for record in dati %}
+            <tr>
+                {% for index in range(nomiColonne|length) %}
+                    <td>
+                        {{record[index]}}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
